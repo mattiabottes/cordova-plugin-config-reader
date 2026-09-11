@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-config-reader",
+  "version": "1.0.0",
+  "description": "Legge le preference definite in config.xml da codice nativo",
+  "cordova": {
+    "id": "cordova-plugin-config-reader",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Mattia Bottes",
+  "license": "MIT"
+}

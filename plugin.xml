@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-config-reader" version="1.0.0">
+
+    <name>ConfigReader</name>
+    <description>Legge le preference definite in config.xml</description>
+    <license>MIT</license>
+
+    <js-module src="www/configReader.js" name="ConfigReader">
+        <clobbers target="cordova.plugins.ConfigReader" />
+    </js-module>
+
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ConfigReader">
+                <param name="android-package" value="net.gamlab.utils.ConfigReader" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/ConfigReader.java" target-dir="src/net/gamlab/utils" />
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ConfigReader">
+                <param name="ios-package" value="ConfigReader" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ConfigReader.h" />
+        <source-file src="src/ios/ConfigReader.m" />
+    </platform>
+
+</plugin>
